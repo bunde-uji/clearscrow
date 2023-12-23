@@ -8,7 +8,7 @@ function DashboardLayout({ children }: any) {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-grow h-full bg-accent py-8 px-10">
+      <main className="flex-grow h-full bg-accent py-8 px-36">
         { children }
       </main>
     </div>

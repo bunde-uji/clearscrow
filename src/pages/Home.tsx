@@ -22,7 +22,7 @@ function Home() {
               marketplace.
             </h3>
             <Link
-              to="/signup" 
+              to="/signup"
               className="py-5 px-12 text-lg rounded-full font-semibold bg-yellow-200 cursor-pointer"
             >
               Get Started!
@@ -176,6 +176,20 @@ function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="flex px-20 py-10">
+        <div>
+          <div className="mockup-phone">
+            <div className="camera"></div>
+            <div className="display">
+              <div className="artboard artboard-demo phone-1">Hi.</div>
+            </div>
+          </div>
+        </div>
+        <div>
+
         </div>
       </div>
 
