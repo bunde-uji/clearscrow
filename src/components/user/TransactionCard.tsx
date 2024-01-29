@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 
 interface Props {
@@ -13,10 +14,16 @@ interface Props {
 import { timeDifference } from "../../utils/timeDifference";
 
 function TransactionCard({id, totalPrice, time, description, status}: Props) {
-    const timeDiff = timeDifference(time);
-
-    console.log(timeDiff);
+    const [timeDiff, setTimeDiff] = useState(timeDifference(time)); 
     
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+          const formattedTime = timeDifference(time);
+          setTimeDiff(formattedTime);
+        }, 60000); // Update every minute
+    
+        return () => clearInterval(intervalId); // Clean up on unmount
+      }, [time]);
 
     return (  
         <Link to={`/my-transactions/${id}`}>

@@ -18,11 +18,14 @@ export function timeDifference(date: Date) {
     // Format the output based on the time difference
     if (sameDay) {
         if (sameHour) {
-          return `${diffInMinutes} minutes ago`;
+          const minutes = diffInMinutes
+          return `${minutes >= 2 ? `${minutes} minutes ago`: minutes > 0 ? "1 minute ago": "now"}`;
         } else {
-          return `${Math.round(diffInMinutes / 60)} hours ago`;
+          const hours = Math.round(diffInMinutes / 60)
+          return `${hours} ${hours > 1 ? "hours" : "hour"} ago`;
         }
       } else {
-        return `${Math.round(diffInMinutes / 1440)} days ago`;
+        const days = Math.round(diffInMinutes / 1440)
+        return `${days} ${days > 1 ? "days" : "day"} ago`;
       }
   }

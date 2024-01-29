@@ -17,17 +17,17 @@ function Signup() {
   };
 
   return (
-    <div className="min-h-screen bg-teal-800 flex flex-col items-center px-20">
-      <div className="p-3">
+    <div className="min-h-screen bg-teal-800 flex flex-col items-center px-6 sm:px-10 md:px-20">
+      <div className="p-10">
         <Link
           to="/"
           className="text-yellow-200 text-3xl font-extrabold font-mono italic"
         >
-          Algo Escrow
+          Clearscrow
         </Link>
       </div>
 
-      <div className="flex flex-col items-center w-full py-5">
+      <div className="flex flex-col items-center w-full py-1">
         <h1 className="text-2xl font-semibold text-accent mb-5">
           Create an account
         </h1>
