@@ -16,15 +16,16 @@ import prevention from "../assets/prevention.png";
 function Home() {
   return (
     <>
+      <Navbar />
       <div className="hero min-h-screen bg-teal-800">
         <div className="hero-content text-center font-mono">
-          <Navbar />
+          
 
-          <div className="max-w-5xl">
-            <h1 className="text-7xl font-bold text-[#FBFFF4] mb-6">
+          <div className="">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-[#FBFFF4] mb-6">
               Revolutionizing the way you buy and sell online securely
             </h1>
-            <h3 className="text-2xl text-accent mb-10">
+            <h3 className="text-lg md:text-2xl text-accent mb-10">
               With Clearscrow, your transactions are protected by airtight
               agreements, giving you peace of mind while navigating the digital
               marketplace.
@@ -40,14 +41,14 @@ function Home() {
       </div>
 
       <div>
-        <div className="grid grid-cols-2">
-          <div className="bg-accent px-20 py-14 text-teal-800 text-xl">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2">
+          <div className="bg-accent px-5 sm:px-10 md:px-14 lg:px-20 py-14 text-teal-800 text-lg md:text-xl">
             <div className="mb-10">
               <h3 className="flex items-center mb-2 font-medium">
                 <img src={ease} alt="" className="h-10 mr-3" />
                 <span>Ease of use</span>
               </h3>
-              <p className="text-lg">With Trustap, it only takes a matter of seconds to open your account. Download the app or create an account here and get transacting with Peace of Mind right away.</p>
+              <p className="text-base md:text-lg">With Trustap, it only takes a matter of seconds to open your account. Download the app or create an account here and get transacting with Peace of Mind right away.</p>
             </div>
 
             <div className="mb-10">
@@ -67,7 +68,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="w-full h-full relative overflow-hidden">
+          <div className="w-full h-[25rem] sm:h-[40rem] md:h-full relative overflow-hidden">
             <img
               src={shopping}
               alt=""
@@ -76,9 +77,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 relative">
+        <div className="flex flex-col md:grid md:grid-cols-2 relative">
           {/* <div> */}
-          <div className="relative w-full h-full overflow-hidden">
+          <div className="relative w-full h-[25rem] sm:h-[40rem] md:h-full overflow-hidden">
             <img
               src={customer}
               alt=""
@@ -86,7 +87,7 @@ function Home() {
             />
           </div>
           {/* </div> */}
-          <div className="bg-accent px-20 py-14 text-teal-800 text-xl">
+          <div className="bg-accent px-5 sm:px-10 md:px-14 lg:px-20 py-14 text-teal-800 text-xl">
             <div className="mb-10">
               <h3 className="flex items-center mb-2 font-medium">
                 <img src={tracking} alt="" className="h-10 mr-3" />
@@ -114,7 +115,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-teal-800 px-20 py-16">
+      <div className="bg-teal-800 px-5 sm:px-10 md:px-14 lg:px-20 py-16">
         <h2 className="text-3xl font-semibold text-accent mb-5">
           Frequently asked questions
         </h2>
@@ -122,7 +123,7 @@ function Home() {
         <div className="flex flex-col gap-4">
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg md:text-xl font-medium">
               How does Clearscrow work?
             </div>
             <div className="collapse-content">
@@ -135,7 +136,7 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg md:text-xl font-medium">
               What method of payment is allowed?
             </div>
             <div className="collapse-content">
@@ -147,7 +148,7 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg md:text-xl font-medium">
               What happens if the buyer does not receive the product or does not
               like the product?
             </div>
@@ -162,7 +163,7 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg md:text-xl font-medium">
               What type of products can i buy on the Clearscrow marketplace?
             </div>
             <div className="collapse-content">
@@ -176,7 +177,7 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg md:text-xl font-medium">
               Can a vendor also buy from other vendors on the platform?
             </div>
             <div className="collapse-content">
@@ -188,7 +189,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 px-40 py-16">
+      <div className="grid grid-cols-1 gap-y-14 md:grid-cols-2 px-5 sm:px-10 md:px-14 lg:px-20 py-16">
         <div className="flex justify-center">
           <div className="mockup-phone">
             <div className="camera"></div>
@@ -201,12 +202,12 @@ function Home() {
         </div>
         <div className="flex flex-col justify-center items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-teal-800">
+              <h3 className="text-xl md:text-2xl font-semibold text-teal-800">
                 Use Clearscrow in these easy steps
               </h3>
-              <ul className="steps steps-vertical">
-                <li className="step step-primary">Register/Create an account</li>
-                <li className="step step-primary">
+              <ul className="steps steps-vertical text-start max-sm:text-sm">
+                <li className="step step-primary text-start">Register/Create an account</li>
+                <li className="step step-primary text-start">
                   Verify your account and connect your bank details
                 </li>
                 <li className="step step-primary">
@@ -226,11 +227,11 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-accent flex flex-col items-center p-20 gap-5">
-        <h2 className="text-6xl font-semibold text-teal-800">
+      <div className="bg-accent flex flex-col items-center px-5 sm:px-10 md:px-14 lg:px-20 py-10 gap-5">
+        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold text-teal-800 text-center">
           Ready to step up?
         </h2>
-        <h5 className="text-2xl font-normal">
+        <h5 className="text-lg sm:text-xl md:text-2xl font-normal text-center">
           Join 100+ businesses and customers who have chosen us to safeguard the
           integrity of their transactions
         </h5>
