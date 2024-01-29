@@ -44,7 +44,7 @@ function Transaction() {
                                         className="h-7 w-7"
                                     />
                                 </div>
-                                <span className="text-sm text-teal-700">{transactionStatus[icon.name]}</span>
+                                <span className="text-sm text-teal-700">{transactionStatus[icon.name as keyof typeof transactionStatus ]}</span>
                             </div>
                         ))}
                     </div>

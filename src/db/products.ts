@@ -1,4 +1,4 @@
-import pic from "../assets/algorand.jpeg"
+// import pic from "../assets/algorand.jpeg"
 import iphone from "../assets/iphone-11-pro.jpeg"
 import ipad from "../assets/ipad-8.jpeg"
 import benz from "../assets/benz.webp"

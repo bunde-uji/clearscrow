@@ -7,12 +7,13 @@ function CreateTransaction() {
   const [deliveryFee, setDeliveryFee] = useState<number>(0);
   const [total, setTotal] = useState<number>(0);
 
-  function updateTotal(price: number, delivery: number): number {
-    return price + delivery;
-  }
+  // function updateTotal(price: number, delivery: number): number {
+  //   return price + delivery;
+  // }
 
   function handleSubmit(e: any) {
     e.preventDefault();
+    console.log(description)
   }
 
   return (
