@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen bg-teal-800">
+      <div className="hero h-[90vh] bg-teal-800">
         <div className="hero-content text-center font-mono">
           
 
@@ -116,18 +116,18 @@ function Home() {
       </div>
 
       <div className="bg-teal-800 px-5 sm:px-10 md:px-14 lg:px-20 py-16">
-        <h2 className="text-3xl font-semibold text-accent mb-5">
+        <h2 className="text-xl md:text-3xl font-semibold text-accent mb-5">
           Frequently asked questions
         </h2>
 
         <div className="flex flex-col gap-4">
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-lg md:text-xl font-medium">
+            <div className="collapse-title text-base sm:text-lg md:text-xl font-medium">
               How does Clearscrow work?
             </div>
             <div className="collapse-content">
-              <p>
+              <p className="text-sm">
                 Clearscrow utilizes state-of-the-art technological infrastructure to secure payment for goods till they reach the buyer. This transparency builds trust between
                 buyers and sellers, fostering a secure and cooperative digital
                 marketplace.
@@ -136,11 +136,11 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-lg md:text-xl font-medium">
+            <div className="collapse-title text-base sm:text-lg md:text-xl font-medium">
               What method of payment is allowed?
             </div>
             <div className="collapse-content">
-              <p>
+              <p className="text-sm">
                 On Clearscrow, buyers can pay for products through a variety of ways including debit/credit cards, bank transfer, or even crypto with stable
                 coins such as USDC, USDT etc.
               </p>
@@ -148,12 +148,12 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-lg md:text-xl font-medium">
+            <div className="collapse-title text-base sm:text-lg md:text-xl font-medium">
               What happens if the buyer does not receive the product or does not
               like the product?
             </div>
             <div className="collapse-content">
-              <p>
+              <p className="text-sm">
                 In the event where a buyer does not like the product he received
                 or claims not to have received it at all, the buyer can open a
                 dispute and our moderators will be sure to review the dispute
@@ -163,11 +163,11 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-lg md:text-xl font-medium">
+            <div className="collapse-title text-base sm:text-lg md:text-xl font-medium">
               What type of products can i buy on the Clearscrow marketplace?
             </div>
             <div className="collapse-content">
-              <p>
+              <p className="text-sm">
                 In the event where a buyer does not like the product he received
                 or claims not to have received it at all, the buyer can open a
                 dispute and our moderators will be sure to review the dispute
@@ -177,11 +177,11 @@ function Home() {
           </div>
           <div className="collapse collapse-plus bg-base-200">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-lg md:text-xl font-medium">
+            <div className="collapse-title text-base sm:text-lg md:text-xl font-medium">
               Can a vendor also buy from other vendors on the platform?
             </div>
             <div className="collapse-content">
-              <p>
+              <p className="text-sm">
                 Yes. A single person can be a vendor in one transaction and be a buyer in a different transaction. There are no restrictions in this regard.
               </p>
             </div>
@@ -194,7 +194,7 @@ function Home() {
           <div className="mockup-phone">
             <div className="camera"></div>
             <div className="display">
-              <div className="artboard artboard-demo phone-1">
+              <div className="artboard artboard-demo phone-1 flex justify-center">
                 <img src={mockupPic} alt="" />
               </div>
             </div>
