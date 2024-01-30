@@ -11,10 +11,15 @@ import Transactions from "./pages/Transactions";
 import CreateTransaction from "./pages/CreateTransaction";
 import JoinTransaction from "./pages/JoinTransaction";
 import Transaction from "./pages/Transaction";
+import Favicon from "react-favicon";
+import favicon from "./assets/favicon.ico";
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+      <Favicon url={favicon} />
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
@@ -25,7 +30,8 @@ function App() {
         <Route path="/join-transaction" element={<JoinTransaction />} />
         <Route path="my-transactions/:id" element={<Transaction />} />
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   );
 }
 

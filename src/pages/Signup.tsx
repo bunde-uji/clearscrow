@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { setUser } from "../utils/user/setUser";
@@ -10,15 +10,23 @@ function Signup() {
   const [retypePassword, setRetypePassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [retypePasswordVisible, setRetypePasswordVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setUser({ name, email, password });
+    setIsLoading(true)
+    
+    setTimeout(() => {
+      setUser({ name, email, password });
+      navigate("/dashboard")
+    }, 2000);
   };
 
   return (
     <div className="min-h-screen bg-teal-800 flex flex-col items-center px-6 sm:px-10 md:px-20">
-      <div className="p-10">
+      <div className="p-8">
         <Link
           to="/"
           className="text-yellow-200 text-3xl font-extrabold font-mono italic"
@@ -28,12 +36,12 @@ function Signup() {
       </div>
 
       <div className="flex flex-col items-center w-full py-1">
-        <h1 className="text-2xl font-semibold text-accent mb-5">
+        <h1 className="text-2xl font-semibold text-accent mb-3">
           Create an account
         </h1>
 
         <form
-          className="bg-accent rounded-3xl w-full md:w-1/2 lg:w-1/3 p-10"
+          className="bg-accent rounded-3xl w-full md:w-3/5 lg:2/5 xl:w-1/3 p-10"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col w-full mb-5">
@@ -119,7 +127,11 @@ function Signup() {
             type="submit"
             className="w-full py-4 bg-teal-800 text-accent rounded-2xl shadow-md"
           >
-            Sign up
+            {isLoading ? (
+              <span className="loading loading-spinner"></span>
+            ) : (
+              "Sign in"
+            )}
           </button>
         </form>
 

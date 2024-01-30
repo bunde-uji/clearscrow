@@ -22,7 +22,7 @@ function CreateTransaction() {
         <div className="w-2/4">
           <p className="text-2xl font-semibold mb-5">Create transaction</p>
           <form 
-            className="bg-[#0000000D] rounded-2xl px-10 py-6 text-xl"
+            className="bg-[#0000000D] rounded-2xl px-10 py-6 text-lg shadow-md"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col w-full mb-5">
@@ -80,7 +80,7 @@ function CreateTransaction() {
 
             <button
               type="submit"
-              className="w-full py-4 bg-teal-800 text-accent rounded-2xl shadow-md"
+              className="w-full py-4 bg-teal-800 text-accent rounded-full shadow-md"
             >
               Start transaction
             </button>

@@ -8,7 +8,7 @@ function JoinTransaction() {
         <div className="w-2/4">
           <p className="text-2xl font-medium mb-5">Join transaction</p>
 
-          <form className="bg-[#0000000D] rounded-2xl px-10 py-6 text-xl flex flex-col items-center">
+          <form className="bg-[#0000000D] rounded-2xl px-10 py-6 text-xl flex flex-col items-center shadow-md">
             <div className="flex flex-col w-full mb-5">
               <label htmlFor="" className="mb-1">
                 Transaction ID
@@ -23,7 +23,7 @@ function JoinTransaction() {
 
             <button
               type="submit"
-              className="w-full py-4 bg-teal-800 text-accent rounded-2xl shadow-md mb-5"
+              className="w-full py-4 bg-teal-800 text-accent rounded-full shadow-md mb-5"
             >
               Join transaction
             </button>

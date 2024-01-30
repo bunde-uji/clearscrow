@@ -33,7 +33,7 @@ function Signin() {
       setIsLoading(false);
 
       if (validateUser()) {
-        navigate("/marketplace");
+        navigate("/dashboard");
       } else {
         setInvalidLogin(true)
       }
@@ -51,13 +51,13 @@ function Signin() {
         </Link>
       </div>
 
-      <div className="flex flex-col items-center w-full py-20">
+      <div className="flex flex-col items-center w-full py-20 px-8">
         <h1 className="text-2xl font-semibold text-accent mb-7">
           Sign in to your account
         </h1>
 
         {invalidLogin && <p className="mb-2 p-2 bg-accent text-red-400 rounded-md">Wrong username or password</p>}
-        <div className="bg-accent rounded-3xl w-1/3 p-10">
+        <div className="bg-accent rounded-3xl w-full md:w-3/5 lg:2/5 xl:w-1/3 p-5 md:p-10">
           <div className="flex flex-col w-full mb-5">
             <label htmlFor="email">Email:</label>
             <input

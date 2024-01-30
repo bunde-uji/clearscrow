@@ -11,11 +11,15 @@ import secure from "../assets/secure.png";
 import tracking from "../assets/tracking.png";
 import negotiation from "../assets/negotiation.png";
 import prevention from "../assets/prevention.png";
+import Favicon from "react-favicon";
+import favicon from "../assets/favicon.ico";
+
 
 
 function Home() {
   return (
     <>
+      <Favicon url={favicon} />
       <Navbar />
       <div className="hero h-[90vh] bg-teal-800">
         <div className="hero-content text-center font-mono">
@@ -25,7 +29,7 @@ function Home() {
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-[#FBFFF4] mb-6">
               Revolutionizing the way you buy and sell online securely
             </h1>
-            <h3 className="text-lg md:text-2xl text-accent mb-10">
+            <h3 className="text-lg md:text-2xl text-accent mb-14">
               With Clearscrow, your transactions are protected by airtight
               agreements, giving you peace of mind while navigating the digital
               marketplace.
