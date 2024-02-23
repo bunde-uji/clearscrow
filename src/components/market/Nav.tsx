@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
+// import
 
 function Nav() {
   return (

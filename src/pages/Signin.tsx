@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { getUser } from "../utils/user/getUser";
+import Logo from "../components/Logo";
 
 // interface FormProp {
 //   event: FormEventHandler<HTMLFormElement>;
@@ -43,16 +44,17 @@ function Signin() {
   return (
     <div className="min-h-screen bg-teal-800 flex flex-col items-center">
       <div className="p-3">
-        <Link
+        {/* <Link
           to="/"
           className="text-yellow-200 text-3xl font-extrabold font-mono italic"
         >
           Algo Escrow
-        </Link>
+        </Link> */}
+        <Logo />
       </div>
 
       <div className="flex flex-col items-center w-full py-20 px-8">
-        <h1 className="text-2xl font-semibold text-accent mb-7">
+        <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold text-accent mb-7">
           Sign in to your account
         </h1>
 

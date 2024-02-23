@@ -34,17 +34,17 @@ function Transaction() {
                 </div>
 
                 <div className="my-8">
-                    <div className="flex justify-between px-10">
+                    <div className="flex justify-between px-5 md:px-10">
                         {statusIcons.map((icon, index) => (
                             <div key={icon.id} className="flex flex-col items-center">
                                 <div className={`p-5 mb-2 border-[3px] inline border-teal-300 rounded-full ${index > statusNumber ? "grayscale" : ""}`}>
                                     <img 
                                         src={icon.icon} 
                                         alt="delivery status icon" 
-                                        className="h-7 w-7"
+                                        className="h-4 w-4 sm:h-7 sm:w-7"
                                     />
                                 </div>
-                                <span className="text-sm text-teal-700">{transactionStatus[icon.name as keyof typeof transactionStatus ]}</span>
+                                <span className="text-sm text-teal-700 text-center">{transactionStatus[icon.name as keyof typeof transactionStatus ]}</span>
                             </div>
                         ))}
                     </div>

@@ -27,7 +27,7 @@ function Home() {
 
           <div className="">
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-[#FBFFF4] mb-6">
-              Revolutionizing the way you buy and sell online securely
+              Securing the way you buy and sell online
             </h1>
             <h3 className="text-lg md:text-2xl text-accent mb-14">
               With Clearscrow, your transactions are protected by airtight
@@ -52,7 +52,7 @@ function Home() {
                 <img src={ease} alt="" className="h-10 mr-3" />
                 <span>Ease of use</span>
               </h3>
-              <p className="text-base md:text-lg">With Trustap, it only takes a matter of seconds to open your account. Download the app or create an account here and get transacting with Peace of Mind right away.</p>
+              <p className="text-base md:text-lg">With Clearscrow, it only takes a matter of seconds to open your account. Download the app or create an account here and get transacting with Peace of Mind right away.</p>
             </div>
 
             <div className="mb-10">

@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { setUser } from "../utils/user/setUser";
+import Logo from "../components/Logo";
 
 function Signup() {
   const [name, setName] = useState("");
@@ -19,24 +20,31 @@ function Signup() {
     setIsLoading(true)
     
     setTimeout(() => {
-      setUser({ name, email, password });
-      navigate("/dashboard")
+      if (password === retypePassword) {
+        setUser({ name, email, password });
+        navigate("/dashboard")
+      } else {
+        navigate("/signup")
+        setIsLoading(false)
+      }
     }, 2000);
+    
   };
 
   return (
     <div className="min-h-screen bg-teal-800 flex flex-col items-center px-6 sm:px-10 md:px-20">
       <div className="p-8">
-        <Link
+        {/* <Link
           to="/"
           className="text-yellow-200 text-3xl font-extrabold font-mono italic"
         >
           Clearscrow
-        </Link>
+        </Link> */}
+        <Logo />
       </div>
 
       <div className="flex flex-col items-center w-full py-1">
-        <h1 className="text-2xl font-semibold text-accent mb-3">
+        <h1 className="text-xl sm:text-2xl font-medium sm:font-semibold text-accent mb-3">
           Create an account
         </h1>
 
@@ -49,6 +57,7 @@ function Signup() {
             <input
               type="text"
               placeholder="Your full name or your business' name"
+              required
               className="input input-bordered w-full rounded-xl"
               onChange={(e) => setName(e.target.value)}
             />
@@ -59,6 +68,7 @@ function Signup() {
             <input
               type="email"
               placeholder="e.g johnsnow@gmail.com"
+              required
               className="input input-bordered w-full rounded-xl"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -79,6 +89,7 @@ function Signup() {
               <input
                 type={`${passwordVisible ? "text" : "password"}`}
                 placeholder=""
+                required
                 className="input input-bordered w-full rounded-xl"
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -104,6 +115,7 @@ function Signup() {
               <input
                 type={`${retypePasswordVisible ? "text" : "password"}`}
                 placeholder=""
+                required
                 className="input input-bordered w-full rounded-xl"
                 onChange={(e) => setRetypePassword(e.target.value)}
               />
