@@ -27,6 +27,11 @@ export const products = {
             price: 15000,
             image: benz
         },
+        {
+            name: "2022 Mercedes-Benz CLA 250",
+            price: 15000,
+            image: benz
+        },
     ],
     gadgets: [
         {

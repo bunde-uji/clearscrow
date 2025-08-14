@@ -23,7 +23,7 @@ function Transactions() {
           :
           <div className="w-full flex flex-col items-center">
             <img src={blank} alt="" className="w-full sm:w-2/3 md:w-1/2 h- mb-5" />
-            <p className="md:text-lg">Oops! It appears you have no transactions yet</p>
+            <p className="md:text-lg">Oops! It appears you have no transactions yet.</p>
           </div>
           }
         </div>
